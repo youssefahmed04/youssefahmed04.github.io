@@ -107,7 +107,7 @@ scrollToSection(contactBtn, contactSection);
 function renderProject(project) {
   const removeSpaceName = project.name.split(" ").join("");
   return `
-    <a class="show-modal" id="project-${removeSpaceName}" href="#${removeSpaceName}">
+    <a class="show-modal" id="project-${removeSpaceName}">
     <span></span>
     <span></span>
     <span></span>
