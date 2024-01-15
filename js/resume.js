@@ -20,7 +20,7 @@ class resumeData {
 const education = new resumeData(
   "Cornell University",
   "Ithaca, NY",
-  "Expected Graduation: May 2026",
+  "Expected Graduation: Dec 2025",
   "Bachelor of Science in Computer Science",
   "",
   "",
