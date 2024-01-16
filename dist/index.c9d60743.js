@@ -1,3 +1,4 @@
+"use strict";
 function sendEmail() {
     Email.send({
         Host: "smtp.elasticemail.com",

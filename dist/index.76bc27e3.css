@@ -194,7 +194,6 @@ nav span {
 .about {
   grid-template-columns: 1fr 1fr;
   place-items: center;
-  height: 80vh;
   display: grid;
 }
 
@@ -577,7 +576,6 @@ nav span {
 .resume-container > h2 {
   color: var(--navy-blue);
   text-align: center;
-  margin-bottom: 4rem;
 }
 
 .resume-btn {
@@ -612,9 +610,8 @@ nav span {
   border-radius: 30px;
   place-items: center;
   width: 85%;
-  height: 80vh;
   margin-bottom: 1rem;
-  padding: 0 3rem;
+  padding: 2rem 3rem;
   display: grid;
   position: relative;
 }
@@ -921,6 +918,145 @@ form button {
 
 .footer span {
   font-weight: 600;
+}
+
+@media only screen and (width <= 600px) {
+  .nav-left, .nav-right {
+    margin: 0 1rem;
+  }
+
+  .nav-left span, nav span {
+    font-size: 20px;
+  }
+
+  .nav-right button {
+    font-size: 16px;
+  }
+
+  .section {
+    padding: 4rem 1rem;
+  }
+
+  .bio .intro {
+    font-size: 30px;
+  }
+
+  .bio .name {
+    font-size: 50px;
+  }
+
+  .bio p {
+    font-size: 25px;
+  }
+
+  .profile img {
+    width: 17rem;
+    height: 20rem;
+  }
+
+  .about, .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .about-container img, .modal-SpacedOut img, .modal-Trendz img, .modal-Forkify .pic-1, .modal-WordleRush .pic-1 {
+    width: 300px;
+  }
+
+  .resume-container {
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  .resume-btn {
+    width: 150px;
+    height: 50px;
+    padding: 1rem;
+    font-size: 18px;
+    transform: translate(0);
+  }
+
+  .resume {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .resume hr {
+    width: 100%;
+    transform: translateX(0);
+  }
+
+  .res-header, .company {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .location, .res-sub .tech, .date {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .res-body {
+    margin-left: 0;
+    font-size: 16px;
+  }
+
+  .res-body li {
+    text-indent: 0;
+  }
+
+  .slider {
+    flex-direction: column;
+  }
+
+  .slide, .course {
+    width: 100%;
+  }
+
+  .course:before {
+    font-size: 12rem;
+    top: -3.5rem;
+    left: -4.4rem;
+  }
+
+  .course-name, .course-no {
+    font-size: 18px;
+  }
+
+  .college-info h5, .college-info span {
+    font-size: 14px;
+  }
+
+  .course img {
+    height: 40px;
+  }
+
+  .projects > a {
+    width: 90%;
+  }
+
+  .projects-container i {
+    font-size: 50px;
+  }
+
+  .projects-container i h2 {
+    font-size: 16px;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
+
+  .social-type {
+    width: 90%;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 1rem;
+  }
 }
 
 /*# sourceMappingURL=index.76bc27e3.css.map */
