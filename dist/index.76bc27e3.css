@@ -933,11 +933,12 @@ form button {
   }
 
   .profile {
-    max-width: 90%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
   }
 
   .bio span {
-    white-space: inherit;
     font-size: 25px;
   }
 
@@ -958,18 +959,21 @@ form button {
     font-size: 50px;
   }
 
-  .about, .contact {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+  .skills-container i h2 {
+    font-size: 25px;
   }
 
-  .about-container > h2 {
+  .about, .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .about-container > h2, .contact-container > h2 {
     margin-bottom: 4rem;
   }
 
   .about img {
-    margin-bottom: 1rem;
+    width: 100%;
+    height: auto;
   }
 
   .about-bio {
@@ -980,20 +984,12 @@ form button {
     font-size: 16px;
   }
 
-  .uni span {
+  .uni span, .degree span {
     display: none;
   }
 
-  .uni:after {
-    content: "Cornell";
-  }
-
-  .degree span {
-    display: none;
-  }
-
-  .degree:after {
-    content: "BS";
+  .uni:after, .degree:after {
+    content: "Simplified";
   }
 
   form {
@@ -1042,15 +1038,6 @@ form button {
   .res-sub {
     gap: .5rem;
     font-size: 75%;
-    display: flex;
-  }
-
-  .res-body {
-    font-size: 90%;
-  }
-
-  .resume-btn {
-    transform: translate(100%, 50%);
   }
 
   .dots {
@@ -1063,8 +1050,6 @@ form button {
 
   .course:before {
     font-size: 12rem;
-    top: -3.5rem;
-    left: -4.4rem;
   }
 
   .course-name, .course-no {
@@ -1091,16 +1076,11 @@ form button {
   .modal-content {
     grid-template-rows: auto auto;
     grid-template-columns: unset;
-    place-items: center;
     gap: 2rem;
-    width: 90%;
-    display: grid;
   }
 
   .images {
     grid-row: 2;
-    place-items: center;
-    display: grid;
   }
 
   .modal-Trendz .modal-text, .modal-WordleRush .modal-text {
@@ -1137,7 +1117,6 @@ form button {
   }
 
   .modal-text {
-    grid-row: 1;
     font-size: 75%;
   }
 
@@ -1154,18 +1133,11 @@ form button {
   }
 
   .contact-info {
-    place-items: center;
-    gap: 1rem;
     width: 100%;
-    display: grid;
   }
 
   .social-type {
     width: 90%;
-  }
-
-  .form {
-    width: 100%;
   }
 
   .footer {
