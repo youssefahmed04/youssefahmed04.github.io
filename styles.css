@@ -949,13 +949,12 @@ form button {
     justify-content: center;
   }
 
-  .nav-left {
-    display: none;
+  .nav-right button {
+    font-size: 14px;
   }
 
-  .nav-right {
-    font-size: 16px;
-    gap: 1rem;
+  .nav-left {
+    display: none;
   }
 
   .section {
@@ -1143,15 +1142,11 @@ form button {
     transform: translateX(100px);
   }
 
-  .modal-WordleRush .modal-text {
-    transform: translateY(30px);
-  }
-
   .modal-SpacedOut .images img {
-    height: 50%;
+    height: 250px;
   }
 
-  .modal-SpacedOut .pic-1 {
+  /* .modal-SpacedOut .pic-1 {
     transform: translate(-40%, 100%);
   }
 
@@ -1161,7 +1156,7 @@ form button {
 
   .modal-SpacedOut .modal-text {
     transform: translateY(140%);
-  }
+  } */
 
   .modal-text {
     font-size: 75%;

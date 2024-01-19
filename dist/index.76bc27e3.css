@@ -922,13 +922,12 @@ form button {
     display: flex;
   }
 
-  .nav-left {
-    display: none;
+  .nav-right button {
+    font-size: 14px;
   }
 
-  .nav-right {
-    gap: 1rem;
-    font-size: 16px;
+  .nav-left {
+    display: none;
   }
 
   .section {
@@ -1103,24 +1102,8 @@ form button {
     transform: translateX(100px);
   }
 
-  .modal-WordleRush .modal-text {
-    transform: translateY(30px);
-  }
-
   .modal-SpacedOut .images img {
-    height: 50%;
-  }
-
-  .modal-SpacedOut .pic-1 {
-    transform: translate(-40%, 100%);
-  }
-
-  .modal-SpacedOut .pic-2 {
-    transform: translate(40%, -100%);
-  }
-
-  .modal-SpacedOut .modal-text {
-    transform: translateY(140%);
+    height: 250px;
   }
 
   .modal-text {
