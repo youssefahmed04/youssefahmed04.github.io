@@ -1088,7 +1088,7 @@ form button {
     overflow: hidden;
   }
 
-  .modal-Forkify .modal-content, .modal-WordleRush .modal-content, .modal-Trendz .modal-content {
+  .modal-content {
     grid-template-rows: auto auto;
     grid-template-columns: unset;
     place-items: center;
@@ -1097,7 +1097,7 @@ form button {
     display: grid;
   }
 
-  .modal-Forkify .images, .modal-WordleRush .images, .modal-Trendz .images {
+  .images {
     grid-row: 2;
     place-items: center;
     display: grid;
@@ -1125,16 +1125,15 @@ form button {
   }
 
   .modal-SpacedOut .pic-1 {
-    transform: translate(10%, 15%);
+    transform: translate(-40%, 100%);
   }
 
   .modal-SpacedOut .pic-2 {
-    transform: translate(10%, -15%);
+    transform: translate(40%, -100%);
   }
 
   .modal-SpacedOut .modal-text {
-    width: 140%;
-    margin-left: 30px;
+    transform: translateY(140%);
   }
 
   .modal-text {
