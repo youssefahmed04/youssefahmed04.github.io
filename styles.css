@@ -943,17 +943,19 @@ form button {
 
 /* Small devices (phones) */
 @media only screen and (max-width: 600px) {
-  .nav-left,
-  .nav-right {
-    margin: 0 1rem;
+  nav {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
   }
 
   .nav-left {
     display: none;
   }
 
-  .nav-right button {
+  .nav-right {
     font-size: 16px;
+    gap: 1rem;
   }
 
   .section {
@@ -1072,6 +1074,10 @@ form button {
   .res-sub {
     font-size: 75%;
     gap: 0.5rem;
+  }
+
+  .resume-btn {
+    transform: translateY(50%);
   }
 
   .dots {

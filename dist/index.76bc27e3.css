@@ -916,15 +916,18 @@ form button {
 }
 
 @media only screen and (width <= 600px) {
-  .nav-left, .nav-right {
-    margin: 0 1rem;
+  nav {
+    justify-content: center;
+    width: 100vw;
+    display: flex;
   }
 
   .nav-left {
     display: none;
   }
 
-  .nav-right button {
+  .nav-right {
+    gap: 1rem;
     font-size: 16px;
   }
 
@@ -1038,6 +1041,10 @@ form button {
   .res-sub {
     gap: .5rem;
     font-size: 75%;
+  }
+
+  .resume-btn {
+    transform: translateY(50%);
   }
 
   .dots {
