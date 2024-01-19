@@ -953,6 +953,10 @@ form button {
     font-size: 14px;
   }
 
+  .nav-right {
+    margin: 0;
+  }
+
   .nav-left {
     display: none;
   }
@@ -1009,20 +1013,11 @@ form button {
 
   .about-bio {
     padding: 0;
+    margin-top: 1rem;
   }
 
   .basic div div {
-    font-size: 16px;
-  }
-
-  .uni span,
-  .degree span {
-    display: none;
-  }
-
-  .uni:after,
-  .degree:after {
-    content: "Simplified";
+    font-size: 14px;
   }
 
   form {
@@ -1146,17 +1141,17 @@ form button {
     height: 250px;
   }
 
-  /* .modal-SpacedOut .pic-1 {
-    transform: translate(-40%, 100%);
+  .modal-SpacedOut .pic-1 {
+    transform: translate(10%);
   }
 
   .modal-SpacedOut .pic-2 {
-    transform: translate(40%, -100%);
+    transform: translate(-10%, 10%);
   }
 
   .modal-SpacedOut .modal-text {
-    transform: translateY(140%);
-  } */
+    transform: translateY(15%);
+  }
 
   .modal-text {
     font-size: 75%;
