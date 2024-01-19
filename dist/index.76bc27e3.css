@@ -103,15 +103,6 @@ nav span {
   font-size: 70px;
 }
 
-.bio p {
-  color: var(--navy-blue);
-  gap: 1rem;
-  margin-top: 15px;
-  font-size: 35px;
-  font-weight: 500;
-  display: flex;
-}
-
 .typer {
   white-space: nowrap;
   border-right: solid 3px var(--navy-blue);
@@ -423,6 +414,7 @@ nav span {
 .close-modal {
   color: var(--navy-blue);
   cursor: pointer;
+  z-index: 20;
   background: none;
   border: none;
   font-size: 4rem;
@@ -877,7 +869,7 @@ form {
   background: var(--white);
   border-radius: 10px;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   max-width: 600px;
   padding: 2vw 4vw;
   display: flex;
@@ -928,8 +920,8 @@ form button {
     margin: 0 1rem;
   }
 
-  .nav-left span, nav span {
-    font-size: 20px;
+  .nav-left {
+    display: none;
   }
 
   .nav-right button {
@@ -940,6 +932,15 @@ form button {
     padding: 4rem 1rem;
   }
 
+  .profile {
+    max-width: 90%;
+  }
+
+  .bio span {
+    white-space: inherit;
+    font-size: 25px;
+  }
+
   .bio .intro {
     font-size: 30px;
   }
@@ -948,26 +949,55 @@ form button {
     font-size: 50px;
   }
 
-  .bio p {
-    font-size: 25px;
-  }
-
   .profile img {
     width: 17rem;
     height: 20rem;
   }
 
+  .skills-container i {
+    font-size: 50px;
+  }
+
   .about, .contact {
-    grid-template-columns: 1fr;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
 
-  .about-container img, .modal-SpacedOut img, .modal-Trendz img, .modal-Forkify .pic-1, .modal-WordleRush .pic-1 {
-    width: 300px;
+  .about-container > h2 {
+    margin-bottom: 4rem;
   }
 
-  .resume-container {
-    min-height: auto;
-    padding: 1rem;
+  .about img {
+    margin-bottom: 1rem;
+  }
+
+  .about-bio {
+    padding: 0;
+  }
+
+  .basic div div {
+    font-size: 16px;
+  }
+
+  .uni span {
+    display: none;
+  }
+
+  .uni:after {
+    content: "Cornell";
+  }
+
+  .degree span {
+    display: none;
+  }
+
+  .degree:after {
+    content: "BS";
+  }
+
+  form {
+    margin-top: 2rem;
   }
 
   .resume-btn {
@@ -988,14 +1018,8 @@ form button {
     transform: translateX(0);
   }
 
-  .res-header, .company {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .location, .res-sub .tech, .date {
-    border-left: none;
-    padding-left: 0;
+  .res-header {
+    font-size: 63%;
   }
 
   .res-body {
@@ -1007,8 +1031,30 @@ form button {
     text-indent: 0;
   }
 
-  .slider {
-    flex-direction: column;
+  .location, .res-sub .tech, .date {
+    padding-left: .5rem;
+  }
+
+  .company-name {
+    margin-right: .5rem;
+  }
+
+  .res-sub {
+    gap: .5rem;
+    font-size: 75%;
+    display: flex;
+  }
+
+  .res-body {
+    font-size: 90%;
+  }
+
+  .resume-btn {
+    transform: translate(100%, 50%);
+  }
+
+  .dots {
+    margin-bottom: 20px;
   }
 
   .slide, .course {
@@ -1033,20 +1079,86 @@ form button {
     height: 40px;
   }
 
-  .projects > a {
+  .projects-container a:hover {
+    cursor: pointer;
+  }
+
+  .modal {
+    padding: 2rem;
+    overflow: hidden;
+  }
+
+  .modal-Forkify .modal-content, .modal-WordleRush .modal-content, .modal-Trendz .modal-content {
+    grid-template-rows: auto auto;
+    grid-template-columns: unset;
+    place-items: center;
+    gap: 2rem;
     width: 90%;
+    display: grid;
   }
 
-  .projects-container i {
-    font-size: 50px;
+  .modal-Forkify .images, .modal-WordleRush .images, .modal-Trendz .images {
+    grid-row: 2;
+    place-items: center;
+    display: grid;
   }
 
-  .projects-container i h2 {
-    font-size: 16px;
+  .modal-Trendz .modal-text, .modal-WordleRush .modal-text {
+    transform: translateY(4rem);
+  }
+
+  .modal-WordleRush .pic-1 {
+    transform: translate(-10px, 40px);
+  }
+
+  .modal-WordleRush .pic-2 {
+    width: 30%;
+    transform: translateX(100px);
+  }
+
+  .modal-WordleRush .modal-text {
+    transform: translateY(30px);
+  }
+
+  .modal-SpacedOut .images img {
+    height: 50%;
+  }
+
+  .modal-SpacedOut .pic-1 {
+    transform: translate(10%, 15%);
+  }
+
+  .modal-SpacedOut .pic-2 {
+    transform: translate(10%, -15%);
+  }
+
+  .modal-SpacedOut .modal-text {
+    width: 140%;
+    margin-left: 30px;
+  }
+
+  .modal-text {
+    grid-row: 1;
+    font-size: 75%;
+  }
+
+  .modal-text .description {
+    gap: 1rem;
+  }
+
+  .modal-content .images img {
+    max-width: 80%;
+  }
+
+  .close-modal {
+    font-size: 2.5rem;
   }
 
   .contact-info {
+    place-items: center;
+    gap: 1rem;
     width: 100%;
+    display: grid;
   }
 
   .social-type {

@@ -19,7 +19,6 @@ body {
 
 .section {
   padding: 8rem 3rem;
-
   transition: transform 1s, opacity 1s;
 }
 
@@ -104,15 +103,6 @@ nav span {
 
 .bio .name {
   font-size: 70px;
-}
-
-.bio p {
-  margin-top: 15px;
-  display: flex;
-  color: var(--navy-blue);
-  gap: 1rem;
-  font-size: 35px;
-  font-weight: 500;
 }
 
 .typer {
@@ -447,6 +437,7 @@ nav span {
   cursor: pointer;
   border: none;
   background: none;
+  z-index: 20;
 }
 
 .modal {
@@ -904,7 +895,7 @@ form {
   display: flex;
   flex-direction: column;
   padding: 2vw 4vw;
-  width: 90%;
+  width: 100%;
   max-width: 600px;
   border-radius: 10px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
@@ -959,9 +950,8 @@ form button {
     margin: 0 1rem;
   }
 
-  .nav-left span,
-  nav span {
-    font-size: 20px;
+  .nav-left {
+    display: none;
   }
 
   .nav-right button {
@@ -972,6 +962,15 @@ form button {
     padding: 4rem 1rem;
   }
 
+  .profile {
+    max-width: 90%;
+  }
+
+  .bio span {
+    font-size: 25px;
+    white-space: inherit;
+  }
+
   .bio .intro {
     font-size: 30px;
   }
@@ -980,31 +979,56 @@ form button {
     font-size: 50px;
   }
 
-  .bio p {
-    font-size: 25px;
-  }
-
   .profile img {
     height: 20rem;
     width: 17rem;
   }
 
+  .skills-container i {
+    font-size: 50px;
+  }
+
   .about,
   .contact {
-    grid-template-columns: 1fr;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .about-container img,
-  .modal-SpacedOut img,
-  .modal-Trendz img,
-  .modal-Forkify .pic-1,
-  .modal-WordleRush .pic-1 {
-    width: 300px;
+  .about-container > h2 {
+    margin-bottom: 4rem;
   }
 
-  .resume-container {
-    padding: 1rem;
-    min-height: auto;
+  .about img {
+    margin-bottom: 1rem;
+  }
+
+  .about-bio {
+    padding: 0;
+  }
+
+  .basic div div {
+    font-size: 16px;
+  }
+
+  .uni span {
+    display: none;
+  }
+
+  .uni:after {
+    content: "Cornell";
+  }
+
+  .degree span {
+    display: none;
+  }
+
+  .degree:after {
+    content: "BS";
+  }
+
+  form {
+    margin-top: 2rem;
   }
 
   .resume-btn {
@@ -1025,17 +1049,8 @@ form button {
     width: 100%;
   }
 
-  .res-header,
-  .company {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .location,
-  .res-sub .tech,
-  .date {
-    border-left: none;
-    padding-left: 0;
+  .res-header {
+    font-size: 63%;
   }
 
   .res-body {
@@ -1047,8 +1062,32 @@ form button {
     text-indent: 0;
   }
 
-  .slider {
-    flex-direction: column;
+  .location,
+  .res-sub .tech,
+  .date {
+    padding-left: 0.5rem;
+  }
+
+  .company-name {
+    margin-right: 0.5rem;
+  }
+
+  .res-sub {
+    font-size: 75%;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .res-body {
+    font-size: 90%;
+  }
+
+  .resume-btn {
+    transform: translate(100%, 50%);
+  }
+
+  .dots {
+    margin-bottom: 20px;
   }
 
   .slide {
@@ -1079,19 +1118,89 @@ form button {
     height: 40px;
   }
 
-  .projects > a {
+  .projects-container a:hover {
+    cursor: pointer;
+  }
+
+  .modal {
+    padding: 2rem;
+    overflow: hidden;
+  }
+
+  .modal-Forkify .modal-content,
+  .modal-WordleRush .modal-content,
+  .modal-Trendz .modal-content {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: unset;
     width: 90%;
+    gap: 2rem;
+    place-items: center;
   }
 
-  .projects-container i {
-    font-size: 50px;
+  .modal-Forkify .images,
+  .modal-WordleRush .images,
+  .modal-Trendz .images {
+    display: grid;
+    grid-row: 2;
+    place-items: center;
   }
 
-  .projects-container i h2 {
-    font-size: 16px;
+  .modal-Trendz .modal-text,
+  .modal-WordleRush .modal-text {
+    transform: translateY(4rem);
+  }
+
+  .modal-WordleRush .pic-1 {
+    transform: translate(-10px, 40px);
+  }
+
+  .modal-WordleRush .pic-2 {
+    width: 30%;
+    transform: translateX(100px);
+  }
+
+  .modal-WordleRush .modal-text {
+    transform: translateY(30px);
+  }
+
+  .modal-SpacedOut .images img {
+    height: 50%;
+  }
+
+  .modal-SpacedOut .pic-1 {
+    transform: translate(10%, 15%);
+  }
+
+  .modal-SpacedOut .pic-2 {
+    transform: translate(10%, -15%);
+  }
+
+  .modal-SpacedOut .modal-text {
+    margin-left: 30px;
+    width: 140%;
+  }
+
+  .modal-text {
+    font-size: 75%;
+    grid-row: 1;
+  }
+  .modal-text .description {
+    gap: 1rem;
+  }
+
+  .modal-content .images img {
+    max-width: 80%;
+  }
+
+  .close-modal {
+    font-size: 2.5rem;
   }
 
   .contact-info {
+    display: grid;
+    gap: 1rem;
+    place-items: center;
     width: 100%;
   }
 
