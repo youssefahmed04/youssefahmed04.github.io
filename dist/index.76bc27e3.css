@@ -441,7 +441,7 @@ nav span {
   width: 80%;
   max-width: 90%;
   max-height: 90%;
-  padding: 6rem;
+  padding: 3rem;
   display: flex;
   position: fixed;
   top: 50%;
@@ -458,11 +458,14 @@ nav span {
 }
 
 .modal-SpacedOut img {
-  object-fit: fill;
   border: 5px solid var(--navy-blue);
   border-radius: 20px;
   height: 500px;
   box-shadow: 0 5px 5px #0003;
+}
+
+.modal-SpacedOut .images {
+  padding: 2rem 0;
 }
 
 .modal-Trendz img, .modal-Forkify .pic-1, .modal-WordleRush .pic-1 {

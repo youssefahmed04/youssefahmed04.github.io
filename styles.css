@@ -459,7 +459,7 @@ nav span {
   justify-content: center;
   width: 80%;
   background-color: white;
-  padding: 6rem;
+  padding: 3rem;
   max-width: 90%;
   max-height: 90%;
   border-radius: 5px;
@@ -477,10 +477,13 @@ nav span {
 
 .modal-SpacedOut img {
   height: 500px;
-  object-fit: fill;
   border-radius: 20px;
   border: 5px solid var(--navy-blue);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.modal-SpacedOut .images {
+  padding: 2rem 0;
 }
 
 .modal-Trendz img,
