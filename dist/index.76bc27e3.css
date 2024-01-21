@@ -928,6 +928,7 @@ form button {
   }
 
   .nav-right {
+    gap: 2rem;
     margin: 0;
   }
 
@@ -1101,7 +1102,7 @@ form button {
   }
 
   .modal-SpacedOut .images img {
-    height: 250px;
+    height: 200px;
   }
 
   .modal-SpacedOut .pic-1 {
