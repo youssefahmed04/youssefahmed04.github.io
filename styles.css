@@ -270,6 +270,7 @@ nav span {
   overflow: hidden;
   box-shadow: 0 3px 3px rgba(255, 255, 255, 0.2);
   border-radius: 3%;
+  cursor: pointer;
 }
 
 .projects > a h4,

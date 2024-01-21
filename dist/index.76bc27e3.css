@@ -257,6 +257,7 @@ nav span {
 .projects > a {
   text-align: center;
   color: #fff;
+  cursor: pointer;
   border-radius: 3%;
   width: 350px;
   height: 350px;

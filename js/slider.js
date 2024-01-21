@@ -87,13 +87,27 @@ const slider = function () {
   const btnRight = document.querySelector(".slider__btn--right");
   const dotContainer = document.querySelector(".dots");
 
-  let curSlide = 1;
-  const maxSlide = slides.length;
+  let curSlide = 0;
+  let firstSlide = 0;
+  let maxSlide = slides.length - 1;
+
+  if (window.innerWidth > 600) {
+    curSlide = 1;
+    firstSlide = 1;
+    maxSlide = slides.length - 2;
+  }
 
   //Functions
   const createDots = function () {
     slides.forEach(function (_, i) {
-      if (i != 0 && i != 7) {
+      if (window.innerWidth > 600) {
+        if (i != 0 && i != 7) {
+          dotContainer.insertAdjacentHTML(
+            "beforeend",
+            `<button class="dots__dot" data-slide="${i}"></button>`
+          );
+        }
+      } else {
         dotContainer.insertAdjacentHTML(
           "beforeend",
           `<button class="dots__dot" data-slide="${i}"></button>`
@@ -119,8 +133,8 @@ const slider = function () {
   };
 
   const nextSlide = function () {
-    if (curSlide === maxSlide - 2) {
-      curSlide = 1;
+    if (curSlide === maxSlide) {
+      curSlide = firstSlide;
     } else {
       curSlide++;
     }
@@ -130,8 +144,8 @@ const slider = function () {
   };
 
   const prevSlide = function () {
-    if (curSlide === 1) {
-      curSlide = maxSlide - 2;
+    if (curSlide === firstSlide) {
+      curSlide = maxSlide;
     } else {
       curSlide--;
     }
@@ -139,16 +153,27 @@ const slider = function () {
     activateDot(curSlide);
   };
 
-  const init = function () {
-    goToSlide(1);
+  const init = function (num) {
+    goToSlide(num);
     createDots();
-    activateDot(1);
+    activateDot(num);
   };
-  init();
+
+  if (window.innerWidth > 600) {
+    init(1);
+  } else {
+    init(0);
+  }
 
   //Event handlers
-  btnRight.addEventListener("click", nextSlide);
-  btnLeft.addEventListener("click", prevSlide);
+  btnRight.addEventListener("click", function () {
+    nextSlide();
+    restartInterval();
+  });
+  btnLeft.addEventListener("click", function () {
+    prevSlide();
+    restartInterval();
+  });
 
   document.addEventListener("keydown", function (e) {
     if (e.key === "ArrowLeft") {
