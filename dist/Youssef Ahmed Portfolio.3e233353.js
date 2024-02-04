@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"pPXTI":[function(require,module,exports) {
+})({"bCWno":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -226,7 +226,11 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== "undefined") {
     var hostname = getHostname();
     var port = getPort();
-    var protocol = HMR_SECURE || location.protocol == "https:" && !/localhost|127.0.0.1|0.0.0.0/.test(hostname) ? "wss" : "ws";
+    var protocol = HMR_SECURE || location.protocol == "https:" && ![
+        "localhost",
+        "127.0.0.1",
+        "0.0.0.0"
+    ].includes(hostname) ? "wss" : "ws";
     var ws;
     try {
         ws = new WebSocket(protocol + "://" + hostname + (port ? ":" + port : "") + "/");
@@ -576,6 +580,6 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"6g7s6":[function(require,module,exports) {
 
-},{}]},["pPXTI","6g7s6"], "6g7s6", "parcelRequire94c2")
+},{}]},["bCWno","6g7s6"], "6g7s6", "parcelRequire94c2")
 
 //# sourceMappingURL=Youssef Ahmed Portfolio.3e233353.js.map
